@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Movie Search</h1>
+
+    <form id="searchForm">
+      <input type="text" id="title" placeholder="Movie title or part of it" required>
+      <select id="type">
+        <option value="movie">movie</option>
+        <option value="series">series</option>
+        <option value="episode">episode</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="message" class="message"></p>
+    <section id="results" class="results"></section>
+    <nav id="pagination" class="pagination"></nav>
+    <section id="details" class="details"></section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

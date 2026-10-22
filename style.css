@@ -1,0 +1,93 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+}
+
+.page { max-width: 1000px; margin: 0 auto; padding: 24px 16px 48px; }
+
+h1 { text-align: center; }
+
+#searchForm {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input, select, button {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #b6bcc6;
+  border-radius: 4px;
+  background: #fff;
+}
+
+#title { flex: 1; min-width: 220px; max-width: 420px; }
+
+button { cursor: pointer; background: #2563eb; color: #fff; border-color: #2563eb; }
+button:hover { background: #1d4ed8; }
+
+.message { text-align: center; font-size: 18px; margin: 24px 0 0; }
+.message.error { color: #b91c1c; }
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.movie {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.movie img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #d1d5db;
+}
+
+.movie-info { padding: 10px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.movie-title { font-weight: bold; }
+.movie-meta { font-size: 14px; color: #6b7280; }
+.movie button { margin-top: auto; padding: 8px; font-size: 14px; }
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.pagination button { background: #fff; color: #2563eb; padding: 6px 12px; }
+.pagination button.active { background: #2563eb; color: #fff; }
+
+.details {
+  margin-top: 32px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  display: none;
+  gap: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.details.visible { display: flex; }
+.details img { width: 240px; max-width: 100%; align-self: flex-start; }
+.details h2 { margin-top: 0; }
+.details p { margin: 6px 0; }
+
+@media (max-width: 600px) {
+  .details.visible { flex-direction: column; }
+}
